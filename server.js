@@ -10,8 +10,7 @@ const jobRouter = require("./routes/job");
 const newsLetterSent = require("./automation/newsletter");
 const applicationRouter = require("./routes/application");
 const { config } = require("dotenv");
-
-config({ path: "./config/config.env" });
+config({ path: "./.env" });
 
 const options = {
   origin: process.env.Front_End_Url,
@@ -40,4 +39,3 @@ app.listen(process.env.PORT, () => {
   console.log(`Server listening at port ${process.env.PORT}`);
 });
 
-require('./config/')
